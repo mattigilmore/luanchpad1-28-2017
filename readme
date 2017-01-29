@@ -1,0 +1,66 @@
+# luanchpad1-28-2017
+rest of this read me  file  comes from http://bowtiebeej.com/DeveloperLaunchpad/
+
+Developer Launchpad Challenge
+A Unit Test looks at and tests a specific unit of code be it a controller testing if it calls the right functions or a converter service. Writing Unit Tests can be broken down into three areas Arrange, Act, and Assert. The three A’s of unit testing. When you Arrange you set up your test cases for testing. This could be as simple as setting a variable to be passed in or complex like creating a large object or calling the database to get an existing item to update. When you Act you are doing the functionality that you are testing. This could be calling a method or checking that your database connections exist or your converter service is functioning. Finally you need to Assert that what you are doing is actually working.
+
+The Challenge
+Last month we took numbers and converted them into roman numerals and then back. While testing along the way. Keep letting your tests drive your development as you work.
+
+Data manipulation is a core part of programming. Many times this manipulation has to do with business logic such as converting one type or value to another. Some times this is because of what the customer wants such as seeing the words true and false in a database instead of 1 and 0. You might also need to convert a sum of money from a number into a string to automate writing checks.
+
+This month’s challenge involves numbers and strings. We will be finding the numbers in strings converting them into text and then converting them back into numbers.
+
+Creating a Test Case
+No matter the level you choose to work with write a test case before you start your code. Then write just enough code to pass the test. Once you have passing code refactor to pass other test cases.
+
+Some languages and frameworks have testing suites available to help build test driven apps. Here is a simple example of a test for this challenge written in JavaScript:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+function TestCase1(){
+    //Arrange
+    var testNum = 3;
+    //Act
+    var result = ConvertToString(testNum);
+    //Assert
+    if(result == "three"){
+        console.log("Test Passed");
+    } else {
+        console.log("Test Failed");
+    }
+}
+Level 1
+Create a simple converter to convert the numbers 1-10 to the text for that number so that if the number 2 is passed into the converter it returns “two”.
+
+Next add to your converter service to allow numbers up to 1,000. If you have time you can keep going as high as you like.
+
+A Step Further
+
+Going a step further reverse the functionality of level one. This time write a service to convert a string representation of a number into the actual number. If the string “two” is passed into your service is should output the number 2.
+
+Level 2
+So far we’ve been working with just integers in this level convert numbers with decimals. If pass 2.5 into the converter it should output “two point five” or “two dot five”.
+
+A Step Further
+
+Going a step further instead of stating the decimals as “point” or “dot” convert them to fractions so that 2.5 will output “two and five tenths”. For a fun challenge try reducing the fractions so that 2.5 instead outputs “two and one half”.
+
+Level 3
+This level deals with strings that contain numbers in them. Start by finding the numbers in a string then convert them to a text representation of the number. If your input is “We have 2 dogs and 1 cat.” the output should be “We have two dogs and one cat.”
+
+Start with the integers then add decimals and fractions into the mix so that “I ate 1.5 cookies” will output “I ate one point five cookies” or even “I ate one and one half cookies”.
+
+A Step Further
+
+Just like in level 1 going a step further involves reversing the conversion so that if the string “I drank eight cups of water today.” is passed into the converter it will output “I drank 8 cups of water today.”
